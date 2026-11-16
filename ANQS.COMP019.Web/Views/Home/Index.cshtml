@@ -4,38 +4,37 @@
 }
 
 <div class="landing-wrapper">
-    <div class="landing-card">
+    <section class="landing-card" aria-labelledby="welcomeTitle">
+        <div class="landing-copy">
+            <div class="landing-brand">
+                <span class="landing-logo" aria-hidden="true">K</span>
+                <span class="landing-logo-text">KOKU</span>
+            </div>
 
-        @* Brand mark *@
-        <div class="landing-brand">
-            <div class="landing-logo">K</div>
-            <span class="landing-logo-text">KOKU</span>
+            <p class="landing-eyebrow">A calmer space for class updates</p>
+            <h1 class="landing-title" id="welcomeTitle">Your class,<br />all in one place.</h1>
+
+            <p class="landing-subtitle">
+                Keep announcements, schedules, and learning resources easy to find&mdash;without
+                digging through group chats.
+            </p>
+
+            <div class="landing-actions">
+                <a asp-area="Identity" asp-page="/Account/Login"
+                   class="btn btn-primary landing-btn">
+                    Log in
+                </a>
+                <a asp-area="Identity" asp-page="/Account/Register"
+                   class="btn btn-outline-teal landing-btn">
+                    Register
+                </a>
+            </div>
         </div>
 
-        @* Mascot *@
-        <img src="~/images/koku-logo.png"
-             alt="KOKU mascot"
-             class="landing-mascot" />
-
-        @* Headline *@
-        <h1 class="landing-title">Your Class,<br>All in One Place.</h1>
-
-        <p class="landing-subtitle">
-            A centralized hub for class announcements, schedules, and academic
-            resources &mdash; no more scrolling through group chats.
-        </p>
-
-        @* CTAs *@
-        <div class="landing-actions">
-            <a asp-area="Identity" asp-page="/Account/Login"
-               class="btn btn-primary landing-btn">
-                Login
-            </a>
-            <a asp-area="Identity" asp-page="/Account/Register"
-               class="btn btn-outline-teal landing-btn">
-                Register
-            </a>
+        <div class="landing-art">
+            <img src="~/images/koku-logo.png"
+                 alt="KOKU class mascot"
+                 class="landing-mascot" />
         </div>
-
-    </div>
+    </section>
 </div>
