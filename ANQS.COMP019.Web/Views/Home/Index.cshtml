@@ -1,8 +1,41 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+@{
+    ViewData["Title"] = "Welcome";
+    Layout = "~/Views/Shared/_LandingLayout.cshtml";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="landing-wrapper">
+    <div class="landing-card">
+
+        @* Brand mark *@
+        <div class="landing-brand">
+            <div class="landing-logo">K</div>
+            <span class="landing-logo-text">KOKU</span>
+        </div>
+
+        @* Mascot *@
+        <img src="~/images/koku-logo.png"
+             alt="KOKU mascot"
+             class="landing-mascot" />
+
+        @* Headline *@
+        <h1 class="landing-title">Your Class,<br>All in One Place.</h1>
+
+        <p class="landing-subtitle">
+            A centralized hub for class announcements, schedules, and academic
+            resources &mdash; no more scrolling through group chats.
+        </p>
+
+        @* CTAs *@
+        <div class="landing-actions">
+            <a asp-area="Identity" asp-page="/Account/Login"
+               class="btn btn-primary landing-btn">
+                Login
+            </a>
+            <a asp-area="Identity" asp-page="/Account/Register"
+               class="btn btn-outline-teal landing-btn">
+                Register
+            </a>
+        </div>
+
+    </div>
 </div>
